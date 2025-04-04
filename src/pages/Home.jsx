@@ -12,6 +12,13 @@ import {
 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import { ThemeDataContext } from "../context/ThemeContext";
+import socialMedia from "../assets/Social_Media.png";
+import ecommerce from "../assets/Ecommerce.png"
+import booking from '../assets/Booking.png'
+import skillify from '../assets/Skillify.png'
+import bolt from '../assets/bolt.png'
+import resume from '../assets/resume.png'
+import video from '../assets/Video.png'
 
 const Home = () => {
   let { isDark } = useContext(ThemeDataContext);
@@ -43,25 +50,47 @@ const Home = () => {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "A modern web application built with React and TypeScript",
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
+      title: "Full Stack Social Media Application",
+      description: "Built a full-stack social media application using the MERN stack with key features: Authentication, Post Management, Profile Customization, Social Sharing.",
+      image: socialMedia,
+      link: "https://social-media-clone-using-mern-stack-7wqf.onrender.com"
     },
     {
-      title: "Project 2",
-      description: "Full-stack application with real-time features",
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
-      tags: ["Node.js", "Socket.io", "MongoDB"],
+      title: "Ecommerce Web Application with Payment Gateway Integration",
+      description: "Built a full-stack e-commerce platform with authentication, product listing, search, admin-controlled product creation, cart management, order placement, and Stripe payment integration.",
+      image: ecommerce,
+      link: "https://ecommerce-with-mern-frontend.onrender.com"
     },
     {
-      title: "Project 3",
-      description: "Mobile-first e-commerce platform",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-      tags: ["React Native", "Redux", "Firebase"],
+      title: "Easy Stay Booking Management System",
+      description: "Developed a full-stack room booking system with authentication, room listing, admin-controlled room management, availability checking, online booking, and payment integration.",
+      image: booking,
+      link: "https://easy-stay-with-mern-frontend.onrender.com"
+    },
+    
+    {
+      title: "Skillify-Full Stack Learning Management System",
+      description: "Built a full-stack LMS with RBAC-based authentication, email verification, and Google OAuth. Features include:\n\nStudents: Explore, enroll, rate courses, and pay via Razorpay.\n\nInstructors: Full course management, revenue tracking, live sessions, real-time messaging, quizzes, and coupon creation.\n\nAdmin: Dashboard with user analytics and reports.\n\nTech Stack: AWS S3 (videos), Cloudinary (images), Socket.IO (real-time chat), AI bot (Gemini), and real-time progress tracking.",
+      image: skillify,
+      link: "https://skillify-frontend-sooty.vercel.app"
+    },
+    {
+      title: "AI Powered Website Generator (Bolt.new Clone) with MERN stack",
+      description: "Developed an AI-driven website generator where users enter a prompt, which is refined via the Gemini API. The backend structures the response into a file tree with code, and projects run in StackBlitz WebContainers, displaying a live preview in an iframe.",
+      image: bolt,
+      link: "https://bolt-frontend-three.vercel.app"
+    },
+    {
+      title: "AI Powered Resume Analyzer with MERN stack",
+      description: "Built an AI-driven resume analyzer with Firebase authentication. Users upload a Word document, which is processed using Mammoth.js. The extracted text is analyzed by Gemini API, generating a structured JSON response displayed on the screen.",
+      image: resume,
+      link: "https://ai-resume-analyzer-frontend.vercel.app"
+    },
+    {
+      title: "Video Calling Application with Node.js and WebRTC",
+      description: "Built a Video Calling App Using WebRTC, Node.js, and EJS. Key Features:\n\nOne-to-one video calls\nPeer-to-peer connection with WebRTC\nSimple UI with EJS\nSignaling with Node.js & WebSockets",
+      image: video,
+      link: "https://video-calling-application-with-node-js.onrender.com"
     },
   ];
 
@@ -69,22 +98,22 @@ const Home = () => {
     {
       icon: <Code size={24} />,
       name: "Frontend",
-      items: ["React", "TypeScript", "Tailwind CSS"],
+      items: ["HTML", "CSS", "Javascript","Tailwind CSS","React js"],
     },
     {
       icon: <Database size={24} />,
       name: "Backend",
-      items: ["Node.js", "Python", "PostgreSQL"],
+      items: ["Node.js", "Mongodb", "Expressjs","WebRTC","Socket Io"],
     },
     {
       icon: <Monitor size={24} />,
       name: "DevOps",
-      items: ["Docker", "AWS", "CI/CD"],
+      items: ["Linux", "Docker", "Kubernetes","Github Actions","AWS"],
     },
     {
       icon: <Briefcase size={24} />,
       name: "Tools",
-      items: ["Git", "VS Code", "Figma"],
+      items: ["Git", "VS Code"],
     },
   ];
 
@@ -171,7 +200,7 @@ const Home = () => {
                 className="mt-12 flex justify-center space-x-6"
               >
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/priyanjal1234"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -181,7 +210,7 @@ const Home = () => {
                   <Github size={24} />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/priyanjal-saxena-327ab6330/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -205,7 +234,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-3 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -311,7 +340,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`${
+                className={` ${
                   isDark ? "text-gray-300" : "text-black"
                 } rounded-lg overflow-hidden shadow-lg`}
               >
@@ -325,16 +354,15 @@ const Home = () => {
                     {project.title}
                   </h3>
                   <p className=" mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={` px-4 py-2 rounded-full font-medium transition-colors text-purple-600 text-center block
+                      `}
+                  >
+                    Visit
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -381,6 +409,7 @@ const Home = () => {
                 <input
                   type="text"
                   id="name"
+                  placeholder="Enter Name"
                   className={`mt-1 block w-full px-4 py-3 rounded-md shadow-lg focus:ring focus:ring-primary focus:ring-opacity-50 ${
                     isDark ? "bg-gray-800 text-white" : "bg-white text-black"
                   }`}
@@ -393,6 +422,7 @@ const Home = () => {
                 <input
                   type="email"
                   id="email"
+                  placeholder="Enter email"
                   className={`mt-1 block w-full px-4 py-3 rounded-md shadow-lg focus:ring focus:ring-primary focus:ring-opacity-50 ${
                     isDark ? "bg-gray-800 text-white" : "bg-white text-black"
                   }`}
@@ -404,6 +434,7 @@ const Home = () => {
                 </label>
                 <textarea
                   id="message"
+                  placeholder="Enter Message"
                   rows={4}
                   className={`mt-1 resize-none block w-full px-4 py-3 rounded-md shadow-lg focus:ring focus:ring-primary focus:ring-opacity-50 ${
                     isDark ? "bg-gray-800 text-white" : "bg-white text-black"
